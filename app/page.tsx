@@ -5,7 +5,7 @@ import InputComponent from '../components/InputComponent';
 import ItemListComponent from '../components/ItemListComponent';
 import ShareComponent from '../components/ShareComponent';
 import styles from '../styles/Home.module.css';
-
+export type Reducer<S> = (state: S, action: Action) => S;
 type State = {
     items: string[];
 };
