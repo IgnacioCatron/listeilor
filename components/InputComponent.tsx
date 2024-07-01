@@ -1,7 +1,10 @@
-// components/InputComponent.tsx
 import React, { useState } from 'react';
 
-const InputComponent = ({ onAddItem }) => {
+type InputComponentProps = {
+    onAddItem: (item: string) => void;
+};
+
+const InputComponent: React.FC<InputComponentProps> = ({ onAddItem }) => {
     const [inputValue, setInputValue] = useState('');
     const [error, setError] = useState('');
 

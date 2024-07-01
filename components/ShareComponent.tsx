@@ -1,7 +1,10 @@
-// components/ShareComponent.tsx
 import React from 'react';
 
-const ShareComponent = ({ items }) => {
+type ShareComponentProps = {
+    items: string[];
+};
+
+const ShareComponent: React.FC<ShareComponentProps> = ({ items }) => {
     const generateShareText = () => {
         if (items.length === 0) return "No hay elementos en la lista.";
         return `Lista de Items:\n${items.map((item, index) => `${index + 1}. ${item}`).join('\n')}`;

@@ -1,7 +1,11 @@
-// components/ItemListComponent.tsx
 import React from 'react';
 
-const ItemListComponent = ({ items, onRemoveItem }) => {
+type ItemListComponentProps = {
+    items: string[];
+    onRemoveItem: (index: number) => void;
+};
+
+const ItemListComponent: React.FC<ItemListComponentProps> = ({ items, onRemoveItem }) => {
     return (
         <ul>
             {items.map((item, index) => (
